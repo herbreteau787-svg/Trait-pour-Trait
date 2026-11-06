@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAIT POUR TRAIT | Dessinateur Projeteur 2D, 3D & Dessin Technique Indépendant</title>
+    <meta name="description" content="Dessinateur projeteur indépendant (5 ans d'expérience en bureau d'études et maîtrise d'ouvrage). Plans AutoCAD, Revit, relevés de terrain, plans d'exécution et rendus 3D pour particuliers et professionnels.">
+    
+    <!-- Open Graph SEO -->
+    <meta property="og:title" content="TRAIT POUR TRAIT | Dessinateur Projeteur Indépendant">
+    <meta property="og:description" content="Plans techniques, exécution, AutoCAD, Revit et DAO pour particuliers, architectes et entreprises. Devis gratuit sous 24h.">
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            900: '#070C1B',
+                            800: '#0A1128',
+                            700: '#131C38',
+                            600: '#1E294B',
+                        },
+                        gold: {
+                            500: '#D4AF37',
+                            400: '#E5C158',
+                            600: '#B3922B',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .blueprint-grid {
+            background-image: linear-gradient(to right, rgba(212, 175, 55, 0.08) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(212, 175, 55, 0.08) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .glass-panel {
+            background: rgba(19, 28, 56, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+        }
+        .gold-glow:hover {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
+        }
+    </style>
+</head>
+<body class="bg-navy-900 text-gray-100 font-sans antialiased selection:bg-gold-500 selection:text-navy-900">
+
+    <!-- TOP BAR DE CONTACT RAPIDE -->
+    <div class="bg-navy-800 border-b border-gold-500/20 py-2 px-4 text-xs tracking-wider">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4 text-gray-300">
+                <span><i class="fas fa-map-marker-alt text-gold-500 mr-1.5"></i> Interventions &amp; Travail à distance (Toute la France)</span>
+                <span class="hidden md:inline">|</span>
+                <span class="hidden md:inline"><i class="fas fa-briefcase text-gold-500 mr-1.5"></i> 5 ans d'expérience BTP (Bureau d'études &amp; Maître d'ouvrage)</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="tel:0787515272" class="hover:text-gold-400 transition flex items-center gap-1.5 font-mono">
+                    <i class="fas fa-phone-alt text-gold-500"></i> 07 87 51 52 72
+                </a>
+                <a href="mailto:leo.herbreteau@outlook.com" class="hover:text-gold-400 transition flex items-center gap-1.5">
+                    <i class="fas fa-envelope text-gold-500"></i> leo.herbreteau@outlook.com
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-navy-900/95 backdrop-blur-md border-b border-gold-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-4 group">
+                <img src="images/logo-trait-pour-trait.jpg" alt="Logo Trait pour Trait" class="h-16 sm:h-20 w-auto object-contain rounded border border-gold-500/40 group-hover:border-gold-500 transition duration-300">
+                <div class="hidden sm:block">
+                    <span class="font-serif font-bold text-xl tracking-wide block text-white group-hover:text-gold-400 transition">TRAIT POUR TRAIT</span>
+                    <span class="text-[11px] uppercase tracking-widest text-gold-500 font-mono">Dessin Technique &amp; Ingénierie</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
+                <a href="#services" class="hover:text-gold-400 transition">Services</a>
+                <a href="#pour-qui" class="hover:text-gold-400 transition">Particuliers &amp; Pros</a>
+                <a href="#realisations" class="hover:text-gold-400 transition">Réalisations</a>
+                <a href="#apropos" class="hover:text-gold-400 transition">À propos</a>
+                <a href="#processus" class="hover:text-gold-400 transition">Processus</a>
+                <a href="#faq" class="hover:text-gold-400 transition">FAQ</a>
+            </nav>
+
+            <!-- CTA Header -->
+            <div class="flex items-center gap-3">
+                <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-navy-900 bg-gold-500 hover:bg-gold-400 transition rounded shadow-lg">
+                    Devis Gratuit
+                </a>
+                <button id="mobile-menu-btn" class="lg:hidden text-gold-500 text-xl p-2 focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-navy-800 border-b border-gold-500/20 px-6 py-4 space-y-3">
+            <a href="#services" class="block text-sm hover:text-gold-400 py-1">Services</a>
+            <a href="#pour-qui" class="block text-sm hover:text-gold-400 py-1">Particuliers &amp; Pros</a>
+            <a href="#realisations" class="block text-sm hover:text-gold-400 py-1">Réalisations</a>
+            <a href="#apropos" class="block text-sm hover:text-gold-400 py-1">À propos de Léo</a>
+            <a href="#processus" class="block text-sm hover:text-gold-400 py-1">Processus</a>
+            <a href="#faq" class="block text-sm hover:text-gold-400 py-1">FAQ</a>
+            <a href="#contact" class="block text-center w-full py-2.5 bg-gold-500 text-navy-900 font-semibold text-xs uppercase rounded">Demander un devis</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-[92vh] flex items-center justify-center blueprint-grid overflow-hidden py-24">
+        <div class="absolute inset-0 bg-cover bg-center mix-blend-luminosity opacity-40 transform scale-105 transition-transform duration-1000" style="background-image: url('images/image2.jpg');"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-navy-900/70 via-navy-900/85 to-navy-900 pointer-events-none"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-500/20 border border-gold-500/40 text-gold-400 text-xs font-mono uppercase tracking-widest mb-6 backdrop-blur-sm">
+                <i class="fas fa-drafting-compass"></i> Dessinateur Projeteur 2D &amp; 3D Revit Indépendant
+            </div>
+            
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-white tracking-tight max-w-4xl mx-auto leading-tight mb-6 drop-shadow-lg">
+                Plans 2D &amp; Rendus 3D Revit pour <span class="text-gold-500 underline decoration-gold-500/40">Particuliers et Entreprises</span>
+            </h1>
+            
+            <p class="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto font-light mb-10 drop-shadow">
+                Conception sur AutoCAD et Revit, rénovation, construction et aménagement sur mesure. Fort de 5 ans d'expérience en bureau d'études et chez le maître d'ouvrage.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+                <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-gold-500 hover:bg-gold-400 text-navy-900 font-bold text-sm uppercase tracking-wider rounded shadow-xl transition flex items-center justify-center gap-2">
+                    <i class="fas fa-file-invoice-dollar"></i> Demander un devis gratuit
+                </a>
+                <a href="#realisations" class="w-full sm:w-auto px-8 py-4 bg-navy-800/90 hover:bg-navy-700 text-white border border-gold-500/40 font-semibold text-sm uppercase tracking-wider rounded transition backdrop-blur-sm flex items-center justify-center gap-2">
+                    <i class="fas fa-images"></i> Voir mes réalisations
+                </a>
+            </div>
+
+            <!-- Mini réassurance -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-8 border-t border-gold-500/30 text-gray-300 text-xs uppercase tracking-wider font-mono bg-navy-900/60 p-4 rounded-xl backdrop-blur-sm">
+                <div class="flex items-center justify-center gap-2"><i class="fas fa-check text-gold-500"></i> Plans &amp; 3D sur-mesure</div>
+                <div class="flex items-center justify-center gap-2"><i class="fas fa-check text-gold-500"></i> Rigueur Bureau d'Études</div>
+                <div class="flex items-center justify-center gap-2"><i class="fas fa-check text-gold-500"></i> Respect des délais</div>
+                <div class="flex items-center justify-center gap-2"><i class="fas fa-check text-gold-500"></i> Devis gratuit &amp; rapide</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION SERVICES -->
+    <section id="services" class="py-24 bg-navy-800/50 relative border-t border-b border-gold-500/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-gold-500 text-xs font-mono uppercase tracking-widest block mb-2">Expertise DAO / CAO / BIM</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">Mes Services Professionnels</h2>
+                <div class="w-24 h-1 bg-gold-500 mx-auto mt-4"></div>
+                <p class="text-gray-400 mt-4 text-sm sm:text-base">Une offre complète de prestations de dessin technique, plans 2D et modélisation/rendus 3D sous Revit adaptée aux particuliers et professionnels.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-panel p-8 rounded-xl gold-glow transition duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 bg-navy-900 border border-gold-500/40 rounded-lg flex items-center justify-center text-gold-500 text-2xl mb-6 group-hover:scale-110 transition duration-300"><i class="fas fa-drafting-compass"></i></div>
+                        <h3 class="text-xl font-bold text-white mb-3">Plans AutoCAD</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">Création de plans détaillés avec AutoCAD, conformes aux normes techniques en vigueur.</p>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-8 rounded-xl gold-glow transition duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 bg-navy-900 border border-gold-500/40 rounded-lg flex items-center justify-center text-gold-500 text-2xl mb-6 group-hover:scale-110 transition duration-300"><i class="fas fa-cube text-gold-500"></i></div>
+                        <h3 class="text-xl font-bold text-white mb-3">Modélisation &amp; Rendus 3D Revit</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">Capacité à réaliser des projets complets et des rendus 3D réalistes sous Revit pour vos petits projets (extensions, maisons).</p>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-8 rounded-xl gold-glow transition duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 bg-navy-900 border border-gold-500/40 rounded-lg flex items-center justify-center text-gold-500 text-2xl mb-6 group-hover:scale-110 transition duration-300"><i class="fas fa-pencil-ruler"></i></div>
+                        <h3 class="text-xl font-bold text-white mb-3">Dessin technique 2D</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">Dessins techniques précis et professionnels (coupes, élévations, détails).</p>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-8 rounded-xl gold-glow transition duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 bg-navy-900 border border-gold-500/40 rounded-lg flex items-center justify-center text-gold-500 text-2xl mb-6 group-hover:scale-110 transition duration-300"><i class="fas fa-building"></i></div>
+                        <h3 class="text-xl font-bold text-white mb-3">Plans d'exécution</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">Plans d'exécution détaillés pour la construction et la pose sur chantier.</p>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-8 rounded-xl gold-glow transition duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 bg-navy-900 border border-gold-500/40 rounded-lg flex items-center justify-center text-gold-500 text-2xl mb-6 group-hover:scale-110 transition duration-300"><i class="fas fa-sync-alt"></i></div>
+                        <h3 class="text-xl font-bold text-white mb-3">Mises à jour de plans</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">Mise à jour et amélioration des plans existants suite à des modifications.</p>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-8 rounded-xl gold-glow transition duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 bg-navy-900 border border-gold-500/40 rounded-lg flex items-center justify-center text-gold-500 text-2xl mb-6 group-hover:scale-110 transition duration-300"><i class="fas fa-map-marked-alt"></i></div>
+                        <h3 class="text-xl font-bold text-white mb-3">Relevés de bâtiments</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">Relevés de plans précis et fiables sur site pour rénovation ou extension.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION POUR QUI ? -->
+    <section id="pour-qui" class="py-24 bg-navy-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-gold-500 text-xs font-mono uppercase tracking-widest block mb-2">Une double expertise</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">À qui s'adressent mes services ?</h2>
+                <div class="w-24 h-1 bg-gold-500 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-navy-800/80 border border-gold-500/30 rounded-2xl p-8 sm:p-10 relative overflow-hidden group hover:border-gold-500 transition">
+                    <h3 class="text-2xl font-serif font-bold text-white mb-6 flex items-center gap-3">
+                        <i class="fas fa-home text-gold-500"></i> Particuliers
+                    </h3>
+                    <p class="text-gray-300 text-sm mb-6">Projets immobiliers personnels, de la conception 3D (Revit) à la réalisation de vos plans d'exécution.</p>
+                    <ul class="space-y-3 text-sm text-gray-300">
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-gold-500"></i> Construction de maison individuelle</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-gold-500"></i> Agrandissement &amp; extension</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-gold-500"></i> Rénovation complète ou partielle</li>
+                    </ul>
+                </div>
+
+                <div class="bg-navy-800/80 border border-gold-500/30 rounded-2xl p-8 sm:p-10 relative overflow-hidden group hover:border-gold-500 transition">
+                    <h3 class="text-2xl font-serif font-bold text-white mb-6 flex items-center gap-3">
+                        <i class="fas fa-hard-hat text-gold-500"></i> Professionnels
+                    </h3>
+                    <p class="text-gray-300 text-sm mb-6">Externalisation de vos plans DAO/CAO et modélisations 3D auprès d'un expert rigoureux.</p>
+                    <ul class="space-y-3 text-sm text-gray-300">
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-gold-500"></i> Architectes &amp; maîtres d'œuvre</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-gold-500"></i> Artisans &amp; entreprises du bâtiment</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-gold-500"></i> Promoteurs immobiliers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION À PROPOS -->
+    <section id="apropos" class="py-24 bg-navy-800/50 border-t border-b border-gold-500/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md rounded-2xl overflow-hidden border-2 border-gold-500/40 shadow-2xl">
+                        <!-- Utilisation de la nouvelle photo Portrait.jpg de meilleure qualité -->
+                        <img src="images/Portrait.jpg" alt="Léo Herbreteau - Dessinateur Projeteur" class="w-full h-auto object-cover">
+                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-navy-900 p-6">
+                            <span class="text-gold-400 font-mono text-xs uppercase tracking-widest block">Fondateur &amp; Dirigeant</span>
+                            <h4 class="text-white font-serif text-xl font-bold">Léo Herbreteau</h4>
+                            <p class="text-gray-300 text-xs mt-1">5 ans d'expérience dans le bâtiment</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-6">
+                    <div>
+                        <span class="text-gold-500 text-xs font-mono uppercase tracking-widest block mb-2">À propos de moi</span>
+                        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">Rigueur, technique et expérience de terrain</h2>
+                        <div class="w-24 h-1 bg-gold-500 mt-4"></div>
+                    </div>
+
+                    <p class="text-gray-300 leading-relaxed text-base">
+                        Je m'appelle <strong>Léo Herbreteau</strong>, dessinateur projeteur indépendant. Fort de <strong>5 ans d'expérience dans le domaine du bâtiment</strong>, j'ai exercé à la fois en <strong>bureau d'études</strong> et directement chez un <strong>maître d'ouvrage</strong>. 
+                    </p>
+
+                    <p class="text-gray-300 leading-relaxed text-base">
+                        Maîtrisant à la fois les outils de dessin 2D (AutoCAD) et la modélisation 3D / rendus sous Revit pour vos petits projets, je traduis vos idées en solutions techniques concrètes et fiables.
+                    </p>
+
+                    <blockquote class="border-l-4 border-gold-500 pl-4 py-2 italic text-gold-300 text-sm font-serif">
+                        "Je mets mes compétences techniques au service de vos projets pour fournir des plans précis et des rendus 3D qualitatifs adaptés à vos besoins."
+                    </blockquote>
+
+                    <div class="grid grid-cols-2 gap-4 pt-4">
+                        <div class="flex items-center gap-3 text-sm text-gray-200"><i class="fas fa-check text-gold-500"></i> Projets sur mesure</div>
+                        <div class="flex items-center gap-3 text-sm text-gray-200"><i class="fas fa-check text-gold-500"></i> Maîtrise Revit &amp; AutoCAD</div>
+                        <div class="flex items-center gap-3 text-sm text-gray-200"><i class="fas fa-check text-gold-500"></i> Devis gratuit</div>
+                        <div class="flex items-center gap-3 text-sm text-gray-200"><i class="fas fa-check text-gold-500"></i> Travail à distance (France entière)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION RÉALISATIONS (Avec insertion de l'image 4 pour les rendus 3D Revit) -->
+    <section id="realisations" class="py-24 bg-navy-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-gold-500 text-xs font-mono uppercase tracking-widest block mb-2">Aperçu des rendus</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">Réalisations, Plans &amp; 3D Revit</h2>
+                <div class="w-24 h-1 bg-gold-500 mx-auto mt-4"></div>
+                <p class="text-gray-400 mt-4 text-sm">Exemples concrets de plans d'exécution, de relevés et de rendus 3D sous Revit et AutoCAD.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Rendu 3D Revit (Image 4 demandée) -->
+                <div class="group relative bg-navy-800 rounded-xl overflow-hidden border border-gold-500/20 shadow-xl cursor-pointer" onclick="openLightbox('images/image4.jpg', 'Rendu 3D Revit - Projet de maison individuelle &amp; extension')">
+                    <div class="h-64 overflow-hidden">
+                        <img src="images/image4.jpg" alt="Rendu 3D Revit" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-mono text-gold-400 uppercase tracking-widest"><i class="fas fa-cube text-gold-500 mr-1"></i> Rendu 3D Revit</span>
+                        <h4 class="text-white font-bold text-lg mt-1">Visuel 3D - Maison &amp; Extension</h4>
+                    </div>
+                </div>
+
+                <div class="group relative bg-navy-800 rounded-xl overflow-hidden border border-gold-500/20 shadow-xl cursor-pointer" onclick="openLightbox('images/image3.jpg', 'Plans Détaillés et Coupes Techniques')">
+                    <div class="h-64 overflow-hidden">
+                        <img src="images/image3.jpg" alt="Plans techniques" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-mono text-gold-400 uppercase tracking-widest">Plans 2D</span>
+                        <h4 class="text-white font-bold text-lg mt-1">Plans de Maisons &amp; Coupes</h4>
+                    </div>
+                </div>
+
+                <div class="group relative bg-navy-800 rounded-xl overflow-hidden border border-gold-500/20 shadow-xl cursor-pointer" onclick="openLightbox('images/image7.jpg', 'Poste de travail AutoCAD / Revit')">
+                    <div class="h-64 overflow-hidden">
+                        <img src="images/image7.jpg" alt="Poste CAO" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-mono text-gold-400 uppercase tracking-widest">DAO / CAO</span>
+                        <h4 class="text-white font-bold text-lg mt-1">Conception sur Poste Pro</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION PROCESSUS -->
+    <section id="processus" class="py-24 bg-navy-800/50 border-t border-b border-gold-500/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-gold-500 text-xs font-mono uppercase tracking-widest block mb-2">Méthodologie</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">Mon Processus de Travail</h2>
+                <div class="w-24 h-1 bg-gold-500 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+                <div class="bg-navy-900 border border-gold-500/30 rounded-xl p-6 text-center">
+                    <div class="w-10 h-10 bg-gold-500 text-navy-900 font-bold rounded-full flex items-center justify-center mx-auto mb-4 font-mono">1</div>
+                    <h4 class="text-white font-bold text-base mb-2">Prise de contact</h4>
+                    <p class="text-gray-400 text-xs">Échange sur votre projet.</p>
+                </div>
+                <div class="bg-navy-900 border border-gold-500/30 rounded-xl p-6 text-center">
+                    <div class="w-10 h-10 bg-gold-500 text-navy-900 font-bold rounded-full flex items-center justify-center mx-auto mb-4 font-mono">2</div>
+                    <h4 class="text-white font-bold text-base mb-2">Analyse du besoin</h4>
+                    <p class="text-gray-400 text-xs">Étude et devis gratuit.</p>
+                </div>
+                <div class="bg-navy-900 border border-gold-500/30 rounded-xl p-6 text-center">
+                    <div class="w-10 h-10 bg-gold-500 text-navy-900 font-bold rounded-full flex items-center justify-center mx-auto mb-4 font-mono">3</div>
+                    <h4 class="text-white font-bold text-base mb-2">Conception 2D / 3D</h4>
+                    <p class="text-gray-400 text-xs">Modélisation rigoureuse.</p>
+                </div>
+                <div class="bg-navy-900 border border-gold-500/30 rounded-xl p-6 text-center">
+                    <div class="w-10 h-10 bg-gold-500 text-navy-900 font-bold rounded-full flex items-center justify-center mx-auto mb-4 font-mono">4</div>
+                    <h4 class="text-white font-bold text-base mb-2">Validation</h4>
+                    <p class="text-gray-400 text-xs">Ajustements et validation.</p>
+                </div>
+                <div class="bg-navy-900 border border-gold-500/30 rounded-xl p-6 text-center">
+                    <div class="w-10 h-10 bg-gold-500 text-navy-900 font-bold rounded-full flex items-center justify-center mx-auto mb-4 font-mono">5</div>
+                    <h4 class="text-white font-bold text-base mb-2">Livraison</h4>
+                    <p class="text-gray-400 text-xs">Transmission des fichiers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION FAQ -->
+    <section id="faq" class="py-24 bg-navy-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-gold-500 text-xs font-mono uppercase tracking-widest block mb-2">Questions Fréquentes</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">Tout ce que vous devez savoir</h2>
+                <div class="w-24 h-1 bg-gold-500 mx-auto mt-4"></div>
+            </div>
+
+            <div class="space-y-4">
+                <div class="bg-navy-800 border border-gold-500/20 rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-4 text-left font-bold text-white flex justify-between items-center focus:outline-none">
+                        <span>Quels logiciels utilisez-vous (AutoCAD, Revit) ?</span>
+                        <i class="fas fa-plus text-gold-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-gray-300 text-sm border-t border-gold-500/10 pt-3">
+                        J'utilise AutoCAD pour tous les plans 2D techniques et d'exécution, et Revit pour la modélisation 3D et les rendus visuels sur vos petits projets.
+                    </div>
+                </div>
+
+                <div class="bg-navy-800 border border-gold-500/20 rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-4 text-left font-bold text-white flex justify-between items-center focus:outline-none">
+                        <span>Quels sont les délais de réalisation ?</span>
+                        <i class="fas fa-plus text-gold-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-gray-300 text-sm border-t border-gold-500/10 pt-3">
+                        Généralement entre 3 et 5 jours ouvrés selon la complexité. Un planning précis est communiqué lors du devis.
+                    </div>
+                </div>
+
+                <div class="bg-navy-800 border border-gold-500/20 rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-4 text-left font-bold text-white flex justify-between items-center focus:outline-none">
+                        <span>Travaillez-vous à distance ?</span>
+                        <i class="fas fa-plus text-gold-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-gray-300 text-sm border-t border-gold-500/10 pt-3">
+                        Oui, partout en France grâce aux échanges numériques, avec possibilité de déplacements pour les relevés selon le secteur.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION CONTACT -->
+    <section id="contact" class="py-24 bg-navy-800/50 border-t border-gold-500/15 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <span class="text-gold-500 text-xs font-mono uppercase tracking-widest block mb-2">Contactez-moi</span>
+                        <h2 class="text-3xl font-serif font-bold text-white">Parlons de votre projet</h2>
+                        <div class="w-24 h-1 bg-gold-500 mt-4"></div>
+                    </div>
+
+                    <p class="text-gray-300 text-sm">
+                        Besoin d'un plan d'exécution, d'un rendu 3D Revit ou d'une assistance CAO ? Contactez Léo Herbreteau directement ou via le formulaire ci-contre.
+                    </p>
+
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-center gap-4 bg-navy-900 p-4 rounded-xl border border-gold-500/20">
+                            <div class="w-12 h-12 bg-gold-500/10 rounded-lg flex items-center justify-center text-gold-500 text-xl">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-gray-400 block font-mono">Téléphone direct</span>
+                                <a href="tel:0787515272" class="text-white font-bold hover:text-gold-400 transition font-mono">07 87 51 52 72</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 bg-navy-900 p-4 rounded-xl border border-gold-500/20">
+                            <div class="w-12 h-12 bg-gold-500/10 rounded-lg flex items-center justify-center text-gold-500 text-xl">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-gray-400 block font-mono">Email professionnel</span>
+                                <a href="mailto:leo.herbreteau@outlook.com" class="text-white font-bold hover:text-gold-400 transition">leo.herbreteau@outlook.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 bg-navy-900 p-4 rounded-xl border border-gold-500/20">
+                            <div class="w-12 h-12 bg-gold-500/10 rounded-lg flex items-center justify-center text-gold-500 text-xl">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-gray-400 block font-mono">Zone d'intervention</span>
+                                <span class="text-white font-bold">Toute la France (Distanciel &amp; Présentiel)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 bg-navy-900 border border-gold-500/30 rounded-2xl p-8 sm:p-10 shadow-2xl">
+                    <h3 class="text-xl font-serif font-bold text-white mb-6">Demande de Devis ou d'Information</h3>
+                    
+                    <form action="mailto:leo.herbreteau@outlook.com" method="POST" enctype="text/plain" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-mono uppercase tracking-wider text-gray-300 mb-2">Votre Nom / Entreprise *</label>
+                                <input type="text" name="Nom" required class="w-full bg-navy-800 border border-gold-500/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold-500 transition text-sm" placeholder="Jean Dupont">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-mono uppercase tracking-wider text-gray-300 mb-2">Téléphone *</label>
+                                <input type="tel" name="Telephone" required class="w-full bg-navy-800 border border-gold-500/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold-500 transition text-sm" placeholder="06 12 34 56 78">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-mono uppercase tracking-wider text-gray-300 mb-2">Email *</label>
+                            <input type="email" name="Email" required class="w-full bg-navy-800 border border-gold-500/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold-500 transition text-sm" placeholder="jean@example.com">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-mono uppercase tracking-wider text-gray-300 mb-2">Message *</label>
+                            <textarea name="Message" rows="4" required class="w-full bg-navy-800 border border-gold-500/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gold-500 transition text-sm" placeholder="Décrivez votre projet (plans 2D ou 3D Revit)..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 bg-gold-500 hover:bg-gold-400 text-navy-900 font-bold uppercase tracking-wider text-sm rounded shadow-lg transition flex items-center justify-center gap-2">
+                            <i class="fas fa-paper-plane"></i> Recevoir mon devis gratuit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy-900 border-t border-gold-500/20 py-12 text-gray-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center text-xs">
+            <p>&copy; 2026 TRAIT POUR TRAIT. Tous droits réservés.</p>
+            <div class="flex items-center gap-4 mt-4 sm:mt-0">
+                <img src="images/logo-trait-pour-trait.jpg" alt="Logo" class="h-10 w-auto rounded">
+                <img src="images/Portrait.jpg" alt="Léo" class="h-8 w-8 rounded-full object-cover border border-gold-500">
+            </div>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-3xl hover:text-gold-500 transition focus:outline-none"><i class="fas fa-times"></i></button>
+        <div class="max-w-4xl w-full text-center">
+            <img id="lightbox-img" src="" alt="Agrandissement" class="max-h-[80vh] mx-auto rounded-lg border border-gold-500/40 shadow-2xl">
+            <p id="lightbox-caption" class="text-white font-serif mt-4 text-lg"></p>
+        </div>
+    </div>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if(mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+        }
+
+        function openLightbox(src, caption) {
+            const lightbox = document.getElementById('lightbox');
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-caption').textContent = caption;
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('flex');
+            lightbox.classList.add('hidden');
+        }
+
+        document.querySelectorAll('.faq-toggle').forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-45');
+            });
+        });
+    </script>
+</body>
+</html>
